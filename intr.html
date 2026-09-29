@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CBT Exam Instructions</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <section class="hero">
+      <div class="hero-heading">
+        <span class="portal-label">Candidate Portal</span>
+        <h1>NEXA examination center</h1>
+        <p class="intro-text">Please review the instructions and exam details carefully before proceeding.</p>
+      </div>
+
+      <div class="information-grid">
+        <section class="info-card">
+          <div class="card-heading">
+            <span class="step-number">01</span>
+            <h2>Before you Begin</h2>
+          </div>
+          <ul class="instruction-list">
+            <li>Have your Student ID number ready.</li>
+            <li>Do not refresh or close the browser during the test.</li>
+            <li>The exam will submit automatically when time expires.</li>
+          </ul>
+        </section>
+
+        <section class="info-card">
+          <div class="card-heading">
+            <span class="step-number">02</span>
+            <h2>Exam Details</h2>
+          </div>
+          <ul class="detail-list">
+            <li><strong>Format</strong><span>Multiple Choice Questions (MCQs)</span></li>
+            <li><strong>Duration</strong><span>15 Minutes per subject</span></li>
+            <li><strong>Navigation</strong><span>Next, Previous, and Submit buttons</span></li>
+            <li><strong>Technical Support</strong><span>Help Desk Available</span></li>
+          </ul>
+        </section>
+      </div>
+
+      <div class="action-area">
+        <p>By proceeding, you confirm that you have read the instructions.</p>
+        <a href="subjects.html" class="btn-start">
+          <span>Proceed to Exam</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <script type="module">
+    import { requireCandidate } from "./auth-guard.js";
+    requireCandidate();
+  </script>
+</body>
+</html>

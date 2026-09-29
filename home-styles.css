@@ -1,0 +1,103 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f5ecdd;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+  background-color: #ffffff;
+  border-bottom: 1px solid #d9c9ae;
+}
+
+.nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-space {
+  width: 44px;
+  height: 44px;
+  border: 1px dashed #7a2740;
+  border-radius: 50%;
+}
+
+.brand-text {
+  color: #5c1a2b;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* ===== Hero ===== */
+.hero {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 100px 40px;
+  text-align: center;
+}
+
+.hero h1 {
+  color: #34101c;
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 1.3;
+  margin-bottom: 24px;
+}
+
+.hero-text {
+  color: #6b4c4c;
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 32px;
+}
+
+.btn-login {
+  display: inline-block;
+  background-color: #5c1a2b;
+  color: #f5ecdd;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 14px 40px;
+  border-radius: 6px;
+}
+
+.btn-login:hover {
+  background-color: #4a1522;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 600px) {
+  .hero {
+    padding: 60px 24px;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
+}
+.logo-space img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 20px;
+}

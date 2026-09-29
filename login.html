@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>National Examination And Assessment</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="login-styles.css">
+</head>
+<body>
+  <main class="page">
+    <div class="panel">
+      <section class="brand-side">
+        <div class="logo-wrap">
+          <img class="portal-logo" src="image/logo.png.jpeg" alt="NEXA Examination Portal logo">
+        </div>
+        <h1 class="authority-name">National Examination<br>And Assessment</h1>
+        <p class="cand">Candidate Portal</p>
+      </section>
+
+      <section class="form-side">
+        <form class="login-form">
+          <div class="field">
+            <label for="regnumber">Registration Number</label>
+            <input type="text" id="regnumber" name="regnumber" placeholder="NEXA/2026/00124" autocomplete="username" required>
+          </div>
+
+          <div class="field">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" autocomplete="current-password" required>
+          </div>
+
+          <p class="message" id="error-msg" role="alert"></p>
+          <button type="submit" class="btn">Log In</button>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <script type="module" src="login.js"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Choose a Subject — NEXA</title>
+  <link rel="stylesheet" href="subjects-styles.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="nav-inner">
+      <div class="nav-brand">
+        <span class="brand-text">NEXA</span>
+      </div>
+
+      <div class="nav-actions">
+        <a href="results.html" class="nav-home">Score History</a>
+        <button type="button" class="nav-logout" id="logoutBtn">Log Out</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="page">
+    <h1>Select a Subject</h1>
+    <p class="page-sub">
+      Each subject has 20 questions and a 15 minute timer.
+      Every submitted attempt is saved to your score history.
+    </p>
+
+    <div class="subject-grid" id="subjectGrid"></div>
+
+    <a href="results.html" class="btn-results">
+      View Results &amp; Previous Scores
+    </a>
+  </main>
+
+  <script type="module" src="subjects.js"></script>
+</body>
+</html>

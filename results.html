@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Results — NEXA</title>
+  <link rel="stylesheet" href="results-styles.css">
+</head>
+<body>
+  <main class="page">
+    <section class="result-card current-results">
+      <p class="label">Current Session</p>
+      <h1>Your Overall Performance</h1>
+
+      <div class="breakdown" id="breakdown"></div>
+
+      <div class="total-row">
+        <span>Total Score</span>
+        <strong id="totalScore">0 / 80</strong>
+      </div>
+
+      <div class="result-links">
+        <a href="subjects.html" class="btn-home">Back to Subjects</a>
+        <button type="button" class="btn-logout" id="logoutBtn">Log Out</button>
+      </div>
+    </section>
+
+    <section class="result-card history-card">
+      <p class="label">Saved Records</p>
+      <h2>Previous Score History</h2>
+      <p class="history-message" id="historyMessage">Loading your scores...</p>
+      <div class="history-list" id="historyList"></div>
+    </section>
+  </main>
+
+  <script type="module" src="results.js"></script>
+</body>
+</html>

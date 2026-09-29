@@ -1,0 +1,98 @@
+NEXA CBT — FIREBASE SETUP
+=========================
+
+Complete these steps before testing the website.
+
+1. CREATE AND REGISTER THE WEB APP
+----------------------------------
+- Go to https://console.firebase.google.com/
+- Create a Firebase project.
+- In Project Overview, click the Web icon </>.
+- Register the app.
+- Open firebase-config.js.
+- Replace every PASTE_YOUR_... value with your Firebase configuration.
+
+Do not place a service-account JSON file or private key in this website.
+
+2. ENABLE EMAIL/PASSWORD AUTHENTICATION
+---------------------------------------
+- Open Firebase Console > Authentication.
+- Click Get started.
+- Open Sign-in method.
+- Enable Email/Password.
+
+3. CREATE THE FOUR CANDIDATE ACCOUNTS
+-------------------------------------
+Open Authentication > Users > Add user.
+
+The website converts registration numbers into internal emails by removing
+slashes and adding @nexa.test.
+
+Create these accounts:
+
+Registration number: NEXA/2026/00124
+Firebase email:      nexa202600124@nexa.test
+Password:            
+
+Registration number: NEXA/2026/00125
+Firebase email:      nexa202600125@nexa.test
+Password:            
+
+Registration number: NEXA/2026/00126
+Firebase email:      nexa202600126@nexa.test
+Password:           
+
+Registration number: NEXA/2026/00127
+Firebase email:      nexa202600127@nexa.test
+Password:            
+
+The candidates still type their normal registration number on the website.
+The internal email is used only by Firebase.
+
+For a real system, replace these example passwords with strong unique passwords.
+
+4. CREATE FIRESTORE
+-------------------
+- Open Firebase Console > Firestore Database.
+- Click Create database.
+- Select Production mode.
+- Choose a database location and create it.
+
+5. ADD THE SECURITY RULES
+-------------------------
+- Open Firestore Database > Rules.
+- Copy everything from firestore.rules.
+- Paste it into the Firebase Rules editor.
+- Click Publish.
+
+These rules allow a candidate to read and create scores only under their own
+Firebase user ID. Candidates cannot update or delete submitted results.
+
+6. RUN THROUGH A WEB SERVER
+---------------------------
+Firebase JavaScript modules should not be tested by double-clicking the HTML
+file. Open the project using VS Code Live Server or deploy it to Netlify.
+
+In VS Code:
+- Open this folder.
+- Right-click index.html.
+- Select Open with Live Server.
+
+7. TEST
+-------
+- Log in with one of the four candidate accounts.
+- Submit one subject.
+- Confirm that the exam page says the score was saved.
+- Open Firebase Console > Firestore Database > Data.
+- You should see:
+  candidates > candidate UID > scores > score document
+- Open Results & Previous Scores and confirm that the attempt appears.
+
+IMPORTANT SECURITY NOTE
+-----------------------
+This version is suitable for a learning project or demonstration. The questions,
+answers, score calculation, and write request are still in browser JavaScript.
+A knowledgeable user can manipulate browser code.
+
+For official high-stakes examinations, calculate and save scores in trusted
+server code such as a Firebase Cloud Function.
